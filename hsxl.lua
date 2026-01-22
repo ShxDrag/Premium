@@ -59,6 +59,4 @@ for _, v in pairs(getgc()) do
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Op.lua"))()
-
--- Load your obfuscated main script
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()

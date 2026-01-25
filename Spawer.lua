@@ -58,5 +58,6 @@ for _, v in pairs(getgc()) do
     end
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Admz.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Admz.lua"))()

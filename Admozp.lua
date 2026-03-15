@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://pastefy.app/6Jrh2hJU/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Probalby.lua"))()
 wait(0.5)
 local adm = require(
     game:GetService("ReplicatedStorage")

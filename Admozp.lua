@@ -1,5 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Probalby.lua"))()
-wait(0.5)
+wait(1)
 local adm = require(
     game:GetService("ReplicatedStorage")
         :WaitForChild("ClientModules")

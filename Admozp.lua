@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShxDrag/Scripty/refs/heads/main/Probalby.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/Farm.lua"))()
 wait(1)
 local adm = require(
     game:GetService("ReplicatedStorage")

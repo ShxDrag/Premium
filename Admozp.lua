@@ -1,5 +1,5 @@
 task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/ShxdragHub_AdoptMe.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/Farm.lua"))()
 end)
 
 task.spawn(function()

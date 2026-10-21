@@ -1,5 +1,5 @@
 task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/ShxdragHub_WindUI1_fixed12(4).lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PremiumAdm/Shxdrag/refs/heads/main/ShxdragNotOp.lua"))()
 end)
 
 task.spawn(function()
